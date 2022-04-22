@@ -1,0 +1,152 @@
+/* Fontes Goole */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* Configurações gerais de layout */
+:root{
+    --color_project_orange: #D2872C;
+    --color_project_gray: #766F68;
+    --color_default: hsl(225, 59%, 11%);
+    --font_default: 'Roboto', sans-serif;
+    --ta_font_default: large;
+    --ta_font_secondary: 22px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    font-family: var(--font_default);
+    font-size: var(--ta_font_default);
+    font-weight: 400;
+    color: var(--color_default);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    border-radius: 4px;
+    max-width: 100%;
+    max-height: auto;
+}
+
+button{
+    border: none;
+    outline: none;
+}
+
+/* Seletores de classes */
+.layout__container{
+    display: grid;
+    grid-template-rows: [header] auto [main_default] auto;
+    grid-row-gap: 100px;
+}
+
+#header__flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.logo_title{
+    font-family: var(--font_default);
+    font-size: var(--ta_font_secondary);
+    font-weight: 600;
+    text-align: center;
+    color: var(--color_project_orange);
+}
+
+.list__menu ul{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.list__menu li{
+    font-family: var(--font_default);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin: auto 4px;
+}
+
+.list__menu li a{
+    text-decoration: none;
+    color: var(--color_default);
+    text-transform: capitalize;
+}
+
+.list__menu li:hover a{
+    color: var(--color_project_gray);
+}
+
+.home_default_flex{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 75px;
+}
+
+.title_description_home{
+    display: inline;
+    position: absolute;
+    left: 0; right: auto;
+    z-index: 100;
+    padding: 40px;
+}
+
+.title_description_home h2{
+    font-family: var(--font_default);
+    font-size: 75px;
+    font-weight: 600;
+    color: var(--color_project_gray);
+    text-align: left;
+}
+
+.title_description_home p{
+    font-family: var(--font_default);
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--color_project_gray);
+    text-align: left;
+}
+
+.startNowLink{
+    display: inline-block;
+    margin: 20px auto;
+    color: #fff;
+}
+
+.startNowLink:hover #startNow{
+    background-color: hsl(17, 100%, 68%);
+}
+
+#startNow{
+    padding: 20px 100px;
+    background-color: var(--color_project_orange);
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+}
+
+.figure_position{
+    position: relative;
+    top: 62px; bottom: auto;
+    left: 20%; right: 0;
+    width: 770px;
+    height: auto;
+    z-index: -200;
+}
